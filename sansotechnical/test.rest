@@ -1,0 +1,16 @@
+POST http://127.0.0.1:8000/
+Content-Type: application/json
+Authorization: Token zUAJoUOZAL1FydqFHIPdEILfaaZ7CcBa
+
+{
+  "alma_systems": [
+    {
+      "system_serial_number": "S12ICE0001",
+      "manufacturing_date": "2023-01-12"
+    }
+  ]
+}
+###
+GET http://127.0.0.1:8000/c
+
+
