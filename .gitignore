@@ -1,6 +1,12 @@
 venv
 db.sqlite3
 
-sansoBackend/__pycache__/urls.cpython-310.pyc
-sansotechnical/__pycache__/admin.cpython-310.pyc
-sansotechnical/__pycache__/models.cpython-310.pyc
+/sansoBackend/__pycache__/urls.cpython-310.pyc
+/sansotechnical/__pycache__/admin.cpython-310.pyc
+/sansotechnical/__pycache__/models.cpython-310.pyc
+/sansotechnical/__pycache__/serializers.cpython-310.pyc
+/sansotechnical/__pycache__/urls.cpython-310.pyc
+/sansotechnical/__pycache__/views.cpython-310.pyc
+/sansotechnical/__pycache__/admin.cpython-310.pyc
+/sansotechnical/__pycache__/models.cpython-310.pyc
+/sansoBackend/__pycache__/settings.cpython-310.pyc

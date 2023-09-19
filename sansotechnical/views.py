@@ -54,7 +54,7 @@ class AllModelsViewSet(viewsets.ModelViewSet):
         return Response(response_data)
 
 class GetAllCustomers(viewsets.ModelViewSet):
-    queryset = Customers()
-    serializer_class = Customers_Ser()
+    queryset = Customers.objects.all()
+    serializer_class = Customers_Ser
     
 
