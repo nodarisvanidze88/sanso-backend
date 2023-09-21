@@ -41,9 +41,9 @@ class GivenItemsStatus(models.Model):
 
 
 class Customers(models.Model):
-    internal_id = models.CharField(max_length=10) # This number is of internal our company registry number
+    internal_id = models.CharField(max_length=10, unique=True) # This number is of internal our company registry number
     name = models.CharField(max_length=100)
-    indetification_code = models.CharField(max_length=11)
+    indetification_code = models.CharField(max_length=11, unique=True)
     address = models.CharField(max_length=200, blank=True)
     contact_person = models.CharField(max_length=200, blank=True)
     contact_person_mobile = models.CharField(max_length=20, blank=True)

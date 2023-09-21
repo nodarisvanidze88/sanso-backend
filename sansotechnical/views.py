@@ -54,7 +54,7 @@ class AllModelsViewSet(viewsets.ModelViewSet):
         return Response(response_data)
 
 class GetAllCustomers(viewsets.ModelViewSet):
-    queryset = Customers.objects.all()
+    queryset = Customers.objects.all().order_by('internal_id')
     serializer_class = Customers_Ser
     
 
