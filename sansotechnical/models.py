@@ -2,7 +2,18 @@ from tkinter import CASCADE
 from typing import Any
 from django.db import models
 
+class Customers(models.Model):
+    internal_id = models.IntegerField(unique=True) # This number is of internal our company registry number
+    name = models.CharField(max_length=100)
+    indetification_code = models.CharField(max_length=11, unique=True)
+    address = models.CharField(max_length=200, blank=True)
+    contact_person = models.CharField(max_length=200, blank=True)
+    contact_person_mobile = models.CharField(max_length=20, blank=True)
+    clinic_name = models.CharField(max_length=100, blank=True)
 
+    def __str__(self):
+        return f'{self.internal_id} - {self.name}'
+    
 class Alma_Systems_Models(models.Model):
     model_name = models.CharField(max_length=50, unique=True)
 
@@ -40,17 +51,7 @@ class GivenItemsStatus(models.Model):
         return self.statuses
 
 
-class Customers(models.Model):
-    internal_id = models.IntegerField(unique=True) # This number is of internal our company registry number
-    name = models.CharField(max_length=100)
-    indetification_code = models.CharField(max_length=11, unique=True)
-    address = models.CharField(max_length=200, blank=True)
-    contact_person = models.CharField(max_length=200, blank=True)
-    contact_person_mobile = models.CharField(max_length=20, blank=True)
-    clinic_name = models.CharField(max_length=100, blank=True)
 
-    def __str__(self):
-        return f'{self.internal_id} - {self.name}'
 
 class CustomersHaveSystem(models.Model):
     systemGivenDate = models.DateField(blank=False)
