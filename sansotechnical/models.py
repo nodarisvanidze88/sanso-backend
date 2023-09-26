@@ -21,7 +21,7 @@ class Alma_Systems_Models(models.Model):
         return self.model_name
 
 class HP_Models(models.Model):
-    model_name = models.CharField(max_length=50)
+    model_name_HP = models.CharField(max_length=50)
 
     def __str__(self):
         return self.model_name
