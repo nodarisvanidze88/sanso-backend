@@ -32,4 +32,4 @@ class Customers_Ser(serializers.ModelSerializer):
 class TechnicalPersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.TechnicalPersons
-        fields = '__all__'
+        fields = ['id','person_name']
