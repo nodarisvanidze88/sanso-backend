@@ -24,8 +24,14 @@ class HP_Models(models.Model):
     model_name_HP = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.model_name
+        return self.model_name_HP
+
+class TechnicalPersons(models.Model):
+    person_name = models.CharField(max_length=30)
     
+    def __str__(self):
+        return self.person_name
+
 class HP_Details(models.Model):
     model_name = models.ForeignKey(HP_Models, on_delete=models.CASCADE, blank=False, related_name="HP_model_name")
     hp_serial_number = models.CharField(max_length=20)

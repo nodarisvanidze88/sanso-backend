@@ -1,8 +1,8 @@
 from rest_framework import viewsets
-from .models import  Customers, Alma_Systems_Models, HP_Models, Alma_Systems
+from .models import  Customers, Alma_Systems_Models, HP_Models, Alma_Systems, TechnicalPersons
 from .serializers import Customers_Ser, Alma_Systems_Models_Ser, HP_Models_Ser, Alma_Systems_Ser
 
-class Customers(viewsets.ModelViewSet):
+class Customer(viewsets.ModelViewSet):
     queryset = Customers.objects.all().order_by('internal_id')
     serializer_class = Customers_Ser
 
@@ -17,5 +17,9 @@ class HPModels(viewsets.ModelViewSet):
 class AlmaSystems(viewsets.ModelViewSet):
     queryset = Alma_Systems.objects.all()
     serializer_class= Alma_Systems_Ser
+
+class TechnicalPerson(viewsets.ModelViewSet):
+    queryset = TechnicalPersons.objects.all()
+    serializer_class= TechnicalPersons
     
 

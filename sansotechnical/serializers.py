@@ -29,3 +29,7 @@ class Customers_Ser(serializers.ModelSerializer):
         model = models.Customers
         fields = '__all__'
 
+class TechnicalPersonSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.TechnicalPersons
+        fields = '__all__'

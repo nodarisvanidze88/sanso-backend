@@ -10,4 +10,5 @@ admin.site.register({
     models.GivenItemsStatus,
     models.CustomersHaveSystem,
     models.customersHaveHP,
+    models.TechnicalPersons,
     })
